@@ -1,0 +1,12 @@
+{
+    "name": "pyrello/drupal-workspace",
+    "description": "A workspace for contributing to Drupal 9+ development",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Sean Adams-Hiett",
+            "email": "pyrello@gmail.com"
+        }
+    ],
+    "require": {}
+}
