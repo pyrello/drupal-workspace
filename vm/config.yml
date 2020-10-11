@@ -1,0 +1,16 @@
+vagrant_hostname: local.pyrello.com
+vagrant_machine_name: pyrello
+drupal_build_composer_project: false
+drupal_composer_path: false
+drupal_composer_install_dir: "/var/www/drupalvm"
+drupal_core_path: "{{ drupal_composer_install_dir }}/web"
+drupal_install_site: false
+
+installed_extras:
+  - xdebug
+
+# XDebug configuration.
+php_xdebug_default_enable: 1
+php_xdebug_cli_disable: no
+php_xdebug_remote_autostart: 1
+php_xdebug_idekey: PHPSTORM

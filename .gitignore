@@ -1,1 +1,17 @@
 /vendor/
+/.editorconfig
+/.gitattributes
+/.idea
+/.vagrant
+
+# Drupal core
+/web/core
+
+# Contrib content
+/web/modules/contrib
+/web/themes/contrib
+/web/profiles/contrib
+
+# User-generated content.
+/web/sites/*/files
+/web/sites/*/private
