@@ -1,9 +1,14 @@
 vagrant_hostname: local.pyrello.com
 vagrant_machine_name: pyrello
+vagrant_synced_folders:
+  - local_path: .
+    destination: "{{ drupal_composer_install_dir }}"
+    type: nfs
+
+drupal_composer_install_dir: "/var/www/{{ vagrant_machine_name }}"
+drupal_core_path: "{{ drupal_composer_install_dir }}/web"
 drupal_build_composer_project: false
 drupal_composer_path: false
-drupal_composer_install_dir: "/var/www/drupalvm"
-drupal_core_path: "{{ drupal_composer_install_dir }}/web"
 drupal_install_site: false
 
 installed_extras:
@@ -14,3 +19,5 @@ php_xdebug_default_enable: 1
 php_xdebug_cli_disable: no
 php_xdebug_remote_autostart: 1
 php_xdebug_idekey: PHPSTORM
+
+ssh_home: "{{ drupal_composer_install_dir }}"

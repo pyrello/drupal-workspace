@@ -4,7 +4,7 @@ A template project for working on Drupal 9+ projects. The project uses Drupal VM
 ## Getting started
 * Clone the repo or download a copy:
   ```bash
-  git clone git@github.com:pyrello/drupal-workspace.git myproject
+  git clone https://github.com/pyrello/drupal-workspace.git myproject
   ```
 * `cd ./myproject`
 * Remove the existing git repo information:
@@ -18,6 +18,10 @@ A template project for working on Drupal 9+ projects. The project uses Drupal VM
 * Add initial commit, set git remote url, push to repo. See https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
 
 ## Local development
+* If you have not already installed composer dependencies, you'll need to do so to be able to use the VM:
+  ```bash
+  composer install
+  ```
 * Start the virtual machine:
   ```bash
   vagrant up
@@ -27,10 +31,7 @@ A template project for working on Drupal 9+ projects. The project uses Drupal VM
   ```bash
   vagrant ssh
   ```
-* If you are just getting started, you'll need to install composer dependencies:
-  ```bash
-  composer install
-  ```
+
 * By default the website will be available locally at `https://local.pyrello.com`. You can change this to something else, see the section below about customizing the Drupal VM configuration.
 
 ## Customizing Drupal VM
@@ -39,3 +40,9 @@ The Drupal VM configuration file is located at `vm/config.yml`. To change the lo
 For full details on Drupal VM customizations, see http://docs.drupalvm.com/en/latest/getting-started/configure-drupalvm/.
 
 Please note that changing the value of `drupal_core_path` will break your local website, unless you also rename the `web` folder to correspond to the entry in `vm/config.yml`.
+
+## Staying up-to-date with changes to this repo
+You can set up a remote that points to this repo to keep in sync with updates: https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork.
+```bash
+git remote add upstream https://github.com/pyrello/drupal-workspace.git
+```
